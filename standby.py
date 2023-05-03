@@ -9,12 +9,14 @@ openai.api_key = OPEN_API_KEY.mykey
 
 
 
-def query(content):
+def query(content, maximum_tokens = 150, temp = 0):
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
     messages=[{"role": "user", "content": content}],
-    max_tokens=150,
-    temperature = 0
+    max_tokens= maximum_tokens,
+    temperature = temp
     )
 
     return(completion['choices'][0]['message']['content'])
+
+
