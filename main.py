@@ -3,5 +3,5 @@
 import standby
 
 
-print(standby.query("give a short meaning of life", temp = 2))
+print(standby.query("Write a haiku", temp = 2))
 
